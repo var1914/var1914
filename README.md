@@ -96,16 +96,6 @@ varun = {
 
 ---
 
-## Activity Graph
-
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=var1914&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=6366F1&line=6366F1&point=FFFFFF)](https://github.com/var1914)
-
-</div>
-
----
-
 ## Let's Connect
 
 <div align="center">

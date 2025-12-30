@@ -96,20 +96,6 @@ varun = {
 
 ---
 
-## GitHub Stats
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=var1914&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=6366F1" />
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=var1914&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=var1914&theme=tokyonight&hide_border=true&background=0D1117&ring=6366F1&fire=6366F1&currStreakLabel=6366F1" />
-
-</div>
-
----
-
 ## Activity Graph
 
 <div align="center">
@@ -134,7 +120,5 @@ varun = {
 <div align="center">
 
 *"In theory, theory and practice are the same. In practice, they're not. That's why we need production ML engineers."*
-
-![Snake animation](https://raw.githubusercontent.com/var1914/var1914/output/github-contribution-grid-snake-dark.svg)
 
 </div>

@@ -1,14 +1,3 @@
-<div align="center">
-
-<!-- Dynamic Typing SVG -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&random=false&width=600&lines=Hey+there!+I'm+Varun+Rajput+%F0%9F%91%8B;ML+Platform+Engineer;Building+intelligent+systems+at+scale)](https://git.io/typing-svg)
-
-![Profile Views](https://komarev.com/ghpvc/?username=var1914&color=6366f1&style=for-the-badge&label=PROFILE+VIEWS)
-
-</div>
-
----
-
 ## About Me
 
 ```python
@@ -112,3 +101,5 @@ varun = {
 *"In theory, theory and practice are the same. In practice, they're not. That's why we need production ML engineers."*
 
 </div>
+
+![Profile Views](https://komarev.com/ghpvc/?username=var1914&color=6366f1&style=for-the-badge&label=PROFILE+VIEWS)

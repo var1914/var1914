@@ -11,7 +11,6 @@ varun = {
         "gpu_fleet": "100+",
         "scale": "production-grade"
     },
-    "certifications": ["AWS ML Specialty", "CKA"],
     "fun_fact": "I orchestrate ML pipelines like a symphony conductor 🎼"
 }
 ```

@@ -1,104 +1,47 @@
-## About Me
+## Varun Rajput
 
-```python
-varun = {
-    "role": "ML Platform Engineer",
-    "experience": "11 years in production infrastructure",
-    "expertise": ["MLOps", "Kubernetes", "AWS", "Production ML Systems"],
-    "currently_exploring": ["PyTorch", "NLP", "LLMs", "RAG Systems"],
-    "infrastructure_managed": {
-        "eks_clusters": "100+",
-        "gpu_fleet": "100+",
-        "scale": "production-grade"
-    },
-    "fun_fact": "I orchestrate ML pipelines like a symphony conductor 🎼"
-}
-```
+ML platform engineer. I make models fast, measurable and correct in production. Right now that means
+**inference performance for computer vision**: PyTorch, ONNX and TensorRT, and the serving systems around them.
 
-- 🔭 Building end-to-end MLOps pipelines with Airflow, Kubeflow & MLflow
-- 🌱 Deep diving into PyTorch, transformer architectures, and RAG systems
-- 🎓 Pursuing Postgraduate Diploma in AI from University of Liverpool
-- 💡 Passionate about bridging the gap between ML research and production systems
-- 🤖 Hobby roboticist working on face recognition and automation projects
+11 years in production infrastructure, the last 5 on ML and data platforms.
 
----
+### What I'm working on (October 2026)
 
-## Tech Stack
+**Open-source fixes, measured before and after**
 
-<div align="center">
+- **torchmetrics** · [#3584](https://github.com/Lightning-AI/torchmetrics/pull/3584): multiclass stat scores built a
+  `num_classes × num_classes` matrix, so memory grew with the square of the class count. One sample at 16k classes:
+  1,956 MiB → 2.5 MiB. The 1M-class case from the issue: an 8 TB request → 134.5 MiB.
+- **Ultralytics** · [#26850](https://github.com/ultralytics/ultralytics/pull/26850): on Apple GPUs, YOLO's per-stage
+  timer didn't wait for the GPU, so most inference time showed up as postprocess (inference reported up to 14× too
+  low at batch 16). Fix with before/after numbers on an M4 and an M5 Pro.
 
-### MLOps & Orchestration
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
-![Kubeflow](https://img.shields.io/badge/Kubeflow-0066FF?style=for-the-badge&logo=kubeflow&logoColor=white)
-![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+**[The Payload Is the Workload](https://github.com/var1914/image-serving-bench)**: a benchmark harness for image
+inference. Per-request cost follows the payload (megapixels, format), not the model, and the usual autoscaling
+signals can't see a shift in the payload mix. Testing a header-only cost signal as the fix.
 
-### ML & Data Science
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+**Postgraduate studies in AI**, University of Liverpool (currently the Deep Learning module).
 
-### Cloud & Infrastructure
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![EKS](https://img.shields.io/badge/Amazon%20EKS-FF9900?style=for-the-badge&logo=amazoneks&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+### How I work
 
-### Data & Monitoring
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=minio&logoColor=white)
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+- Measure first, change second, and quote the number from the code that ships.
+- Open-loop load, percentiles rather than means, paired A/B runs, identical-output checks.
 
-</div>
+### Background
 
----
+- ML platforms on Kubernetes and AWS: training and serving pipelines with Airflow, Kubeflow and MLflow, across
+  100+ EKS clusters and a 100+ GPU fleet.
+- LLM serving: vLLM workers behind a job queue, which took document translation turnaround from ~20 min to ~5 s.
+- Edge computer vision: ONNX → TensorRT engines for Jetson devices.
 
-## Current Focus & Goals
+### Stack
 
-| Timeline | Goal |
-|----------|------|
-| **Now** | 🔬 Deep diving into **PyTorch**, **NLP**, **LLMs** & **RAG architectures** |
-| **Building** | 🛠️ Production-grade MLOps boilerplate with end-to-end pipelines |
-| **Next** | 🌍 Targeting senior ML engineering roles |
-| **Exploring** | 🤖 Computer vision & robotics for hobby automation projects |
-| **Long-term** | 🚀 Transitioning from MLOps to full-stack robotics engineering |
+PyTorch · ONNX / ONNX Runtime · TensorRT · vLLM · Kubernetes (EKS) · AWS · Terraform · Airflow · Kubeflow · MLflow ·
+Prometheus / Grafana · Docker · Python
 
----
-
-## Featured Projects
-
-<div align="center">
-
-### 📊 MLOps Boilerplate
-**Production-ready template** for ML pipelines featuring model versioning, experiment tracking, automated retraining, and monitoring - built to showcase best practices.
-
-### 🔬 PCAM Histopathology Classification Pipeline
-**End-to-end MLOps pipeline** with Airflow orchestration, MLflow experiment tracking, and Kubeflow deployment on Kubernetes with MinIO storage. Demonstrates production-scale ML system design.
-
-</div>
-
----
-
-## Let's Connect
-
-<div align="center">
+### Contact
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/varun-rajput-4096115a/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:therajputvarun@gmail.com)
-
-</div>
-
----
-
-<div align="center">
-
-*"In theory, theory and practice are the same. In practice, they're not. That's why we need production ML engineers."*
-
-</div>
 
 ![Profile Views](https://komarev.com/ghpvc/?username=var1914&color=6366f1&style=for-the-badge&label=PROFILE+VIEWS)

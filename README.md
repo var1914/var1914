@@ -7,14 +7,19 @@ ML platform engineer. I make models fast, measurable and correct in production. 
 
 ### What I'm working on (October 2026)
 
-**Open-source fixes, measured before and after**
+**Open-source work, measured before and after**
 
+- **Ultralytics** · [#26897](https://github.com/ultralytics/ultralytics/pull/26897) (merged): YOLO now loads the next
+  image while OpenVINO runs inference on CPU. Measured on the merged code on 2- and 4-core x86 VMs, paired runs with
+  identical outputs: 7–8% faster at batch 1, no loss at batch 16. While measuring it, I found PyTorch's idle OpenMP
+  threads slowing YOLO's ONNX Runtime pipeline 2.4× on 8 vCPUs.
 - **torchmetrics** · [#3584](https://github.com/Lightning-AI/torchmetrics/pull/3584): multiclass stat scores built a
   `num_classes × num_classes` matrix, so memory grew with the square of the class count. One sample at 16k classes:
   1,956 MiB → 2.5 MiB. The 1M-class case from the issue: an 8 TB request → 134.5 MiB.
 - **Ultralytics** · [#26850](https://github.com/ultralytics/ultralytics/pull/26850): on Apple GPUs, YOLO's per-stage
   timer didn't wait for the GPU, so most inference time showed up as postprocess (inference reported up to 14× too
-  low at batch 16). Fix with before/after numbers on an M4 and an M5 Pro.
+  low at batch 16). The maintainer validated the fix on his own M5 Pro and chose not to merge it: the sync costs about
+  4.5% at batch 1 on the default inference path, the trade-off I had measured and disclosed.
 
 **[The Payload Is the Workload](https://github.com/var1914/image-serving-bench)**: a benchmark harness for image
 inference. Per-request cost follows the payload (megapixels, format), not the model, and the usual autoscaling
